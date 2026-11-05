@@ -1,0 +1,37 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.fontSize": 15,
+    "editor.codeLensFontSize": 13,
+    "editor.lineHeight": 24,
+    "editor.renderWhitespace": "none",
+    "editor.guides.indentation": false,
+    "editor.stickyScroll.enabled": false,
+    "workbench.startupEditor": "none",
+    "workbench.editor.showTabs": "single",
+    "files.exclude": {
+      "*.code-workspace": true
+    },
+    "catalogLens.enabled": false,
+    "pnpmCatalogLens.enabled": false,
+    "package-json-upgrade.showUpdatesAtStart": false,
+    "package-json-upgrade.showOverviewRulerColor": false,
+    "package-json-upgrade.ignorePatterns": [
+      ".*"
+    ],
+    "package-json-upgrade.dependencyGroups": "none",
+    "editor.occurrencesHighlight": "off",
+    "editor.selectionHighlight": false,
+    "editor.renderLineHighlight": "none",
+    "editor.cursorBlinking": "solid",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.overviewRulerBorder": false,
+    "workbench.statusBar.visible": false
+  }
+}

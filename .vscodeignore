@@ -1,0 +1,13 @@
+src/**
+node_modules/**
+tsconfig.json
+pnpm-lock.yaml
+*.vsix
+demo/**
+assets/**
+.github/**
+images/raw/**
+images/hero.png
+images/demo.gif
+.gitignore
+pnpm-workspace.yaml

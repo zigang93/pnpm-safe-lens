@@ -1,0 +1,91 @@
+{
+  "name": "pnpm-safe-lens",
+  "displayName": "pnpm Safe Lens",
+  "description": "See which version of each pnpm catalog dependency you can install today, before pnpm's minimumReleaseAge blocks it.",
+  "version": "0.4.0",
+  "publisher": "zigang93",
+  "author": {
+    "name": "Tan Zi Gang",
+    "url": "https://tanzigang.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zigang93/pnpm-safe-lens.git"
+  },
+  "homepage": "https://github.com/zigang93/pnpm-safe-lens#readme",
+  "bugs": {
+    "url": "https://github.com/zigang93/pnpm-safe-lens/issues"
+  },
+  "pricing": "Free",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1b1f2a",
+    "theme": "dark"
+  },
+  "keywords": [
+    "pnpm",
+    "catalog",
+    "minimumReleaseAge",
+    "version lens",
+    "dependencies",
+    "supply chain",
+    "monorepo"
+  ],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Linters"
+  ],
+  "activationEvents": [
+    "onLanguage:yaml"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pnpmSafeLens.refresh",
+        "title": "pnpm Safe Lens: Refresh versions"
+      }
+    ],
+    "configuration": {
+      "title": "pnpm Safe Lens",
+      "properties": {
+        "pnpmSafeLens.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show code lenses in pnpm-workspace.yaml."
+        },
+        "pnpmSafeLens.cacheTtlMinutes": {
+          "type": "number",
+          "default": 30,
+          "description": "How long to keep fetched package metadata before fetching it again."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node20 --external:vscode --minify --outfile=dist/extension.js",
+    "check-types": "tsc --noEmit",
+    "vscode:prepublish": "npm run build",
+    "package": "vsce package --no-dependencies",
+    "gif": "node assets/make-gif.mjs"
+  },
+  "dependencies": {
+    "semver": "^7.8.6",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/semver": "^7.8.0",
+    "@types/vscode": "1.90.0",
+    "@vscode/vsce": "^4.1.0",
+    "esbuild": "^0.28.2",
+    "gifenc": "^1.0.3",
+    "pngjs": "^7.0.0",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "pnpm@12.16.1"
+}
