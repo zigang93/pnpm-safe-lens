@@ -34,4 +34,6 @@ jobs:
 
       - run: pnpm check-types
 
+      - run: pnpm test
+
       - run: pnpm exec vsce publish --no-dependencies --oidc

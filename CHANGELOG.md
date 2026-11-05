@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1
+
+- Shorter labels show up-to-date status or clickable safe updates, without release ages.
+- Blocked updates show an unblock countdown that refreshes every minute and becomes a clickable update once allowed.
+- Updated demo screenshot and animation show a real one-click update alongside blocked versions.
+
 ## 0.4.0
 
 First public release.

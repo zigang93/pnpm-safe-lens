@@ -1,17 +1,12 @@
-packages:
-  - apps/*
-  - packages/*
+minimumReleaseAge: 1440
 
 catalog:
   react: 19.2.0
   react-dom: 19.3.1
   next: 16.4.5
   better-auth: 1.7.16
-  lucide-react: 1.69.0
-  zod: ^4.6.0
-  typescript: 'npm:@typescript/typescript6@^6.0.2'
+  lucide-react: 1.68.0
 
 catalogs:
   db:
     drizzle-orm: 1.0.0-rc.4
-    pg: 8.23.1

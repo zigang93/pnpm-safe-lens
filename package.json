@@ -2,7 +2,7 @@
   "name": "pnpm-safe-lens",
   "displayName": "pnpm Safe Lens",
   "description": "See which version of each pnpm catalog dependency you can install today, before pnpm's minimumReleaseAge blocks it.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "publisher": "zigang93",
   "author": {
     "name": "Tan Zi Gang",
@@ -71,7 +71,8 @@
     "check-types": "tsc --noEmit",
     "vscode:prepublish": "npm run build",
     "package": "vsce package --no-dependencies",
-    "gif": "node assets/make-gif.mjs"
+    "gif": "node assets/make-gif.mjs",
+    "test": "pnpm build && node --test tests/*.test.cjs"
   },
   "dependencies": {
     "semver": "^7.8.6",
