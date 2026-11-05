@@ -6,9 +6,9 @@ pnpm 11 and later skip any version published in the last 24 hours (`minimumRelea
 
 pnpm Safe Lens reads the same rules pnpm uses and shows, for every entry in your `pnpm-workspace.yaml` catalogs, the newest version that will actually install today.
 
-![pnpm Safe Lens in a pnpm-workspace.yaml catalog](images/hero.png)
+![Clickable safe updates and blocked-version countdowns in pnpm-workspace.yaml](images/hero.png)
 
-Click a lens to apply it. Here `react` is updated, `lucide-react` is moved back from a version pnpm would block, and `drizzle-orm` moves to the next release candidate:
+Click **update to** to apply a safe version. In this demo, React changes from `19.2.0` to `19.3.1` in one click. Newer better-auth and lucide-react releases stay blocked with an unblock countdown:
 
 ![Clicking lenses to update catalog entries](images/demo.gif)
 
@@ -26,12 +26,14 @@ Then open your `pnpm-workspace.yaml`.
 
 | Lens | Meaning | Click it to |
 | --- | --- | --- |
-| `↑ update to 19.3.1 · released 21d ago` | A newer version is past the release-age window | Update the entry |
-| `✓ up to date · released 1d 13h ago` | Nothing newer is installable | |
-| `🕐 1.7.17 unlocks in 7h 57m` | A newer version exists, but pnpm blocks it for now | |
+| `↑ update to 19.3.1` | A newer version is past the release-age window | Update the entry |
+| `✓ up to date` | Nothing newer is installable | |
+| `🕐 1.7.17 blocked · unlocks in 7h 57m` | A newer version exists, but pnpm blocks it for now | |
 | `⚠ too new for pnpm · unlocks in 22h 15m` | The version you pinned can't be installed yet | |
-| `↓ use 1.68.0 · released 1d 1h ago` | The newest version that does install | Switch to it |
+| `↓ use 1.68.0` | The newest version that does install | Switch to it |
 | `✓ resolves to 4.6.7` | For a range such as `^4.6.0`, what pnpm resolves today | |
+
+The unblock countdown refreshes every minute. Once a version clears the waiting period, click its update lens to apply it.
 
 ## Features
 

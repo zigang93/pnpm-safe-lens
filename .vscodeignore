@@ -11,3 +11,4 @@ images/hero.png
 images/demo.gif
 .gitignore
 pnpm-workspace.yaml
+tests/**
